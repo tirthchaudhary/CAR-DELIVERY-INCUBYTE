@@ -47,12 +47,7 @@ cd server
 npm install
 ```
 
-Create a `server/.env` file (refer to `server/.env.example` template):
-```env
-PORT=5000
-JWT_SECRET=your_jwt_secret_key_here
-MONGO_URI=your_mongodb_connection_string_here
-```
+Set environment configuration for Backend (`PORT`, `JWT_SECRET`, `MONGO_URI`).
 
 Run Backend Server:
 ```bash
@@ -67,10 +62,7 @@ cd client
 npm install
 ```
 
-Create a `client/.env` file (refer to `client/.env.example` template):
-```env
-VITE_API_BASE_URL=http://localhost:5000/api
-```
+Set environment configuration for Frontend (`VITE_API_BASE_URL`).
 
 Run Frontend SPA:
 ```bash
