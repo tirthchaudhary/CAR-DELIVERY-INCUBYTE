@@ -97,6 +97,21 @@ Ran all test suites.
 
 ---
 
+## 🖼️ UI Interface
+
+### 1. Register / Login
+<img width="1917" height="962" alt="Register Login 1" src="https://github.com/user-attachments/assets/06ae53aa-e1be-4006-a3f9-1f6a9d64441b" />
+<img width="1917" height="946" alt="Register Login 2" src="https://github.com/user-attachments/assets/f3ddf8b0-5684-441c-9deb-4f3f343a2332" />
+
+### 2. Admin Portal
+<img width="1882" height="957" alt="Admin Portal 1" src="https://github.com/user-attachments/assets/499cd711-c23a-40da-82ad-b75524e33616" />
+<img width="1917" height="967" alt="Admin Portal 2" src="https://github.com/user-attachments/assets/021062fe-6945-48fd-ae99-685312b4b207" />
+
+### 3. Customer Portal
+<img width="1917" height="963" alt="Customer Portal" src="https://github.com/user-attachments/assets/afb6ab5c-cac2-466c-b92b-ca9a240c2956" />
+
+---
+
 ## 🤖 My AI Usage
 
 In compliance with the assignment guidelines, AI tools were leveraged as developer assistance tools throughout the software development lifecycle.
