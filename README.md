@@ -1,0 +1,132 @@
+# 🚗 Car Dealership Inventory System (Full-Stack TDD Kata)
+
+A full-stack Car Dealership Inventory Management application built using **Node.js, Express, MongoDB (Mongoose), React, Tailwind CSS, and Jest with Supertest**.
+
+This project strictly follows **Test-Driven Development (TDD)** practices (Red-Green-Refactor), **Role-Based Access Control (RBAC)** security, and **AI Tooling Transparency**.
+
+---
+
+## 🌟 Key Features
+
+### 🔑 Authentication & Authorization (RBAC)
+- User Registration & Login with **bcrypt** password hashing and **JWT** token generation.
+- **Role-Based Access Control**:
+  - **`user` (Customer)**: Browse catalog, search/filter vehicles, and purchase vehicles.
+  - **`admin` (Dealership Admin)**: Full CRUD access + exclusive **Delete** and **Restock (+Quantity)** capabilities.
+
+### 🚗 Vehicle Catalog & Inventory Management
+- **Dynamic Search & Filtering**: Multi-criteria search by Make, Model, Category, and Price Range ($min to $max) using case-insensitive Mongoose regex.
+- **Stock Control**: Automated quantity decrements on purchase. The **"Purchase Vehicle" button is disabled** when stock reaches `0`.
+- **Admin Modal**: Modal form for dealership admins to add new vehicles to live inventory.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Backend API**: Node.js, Express.js, MongoDB Atlas (Mongoose), JWT, Bcrypt.js
+- **Backend Testing**: Jest, Supertest, `mongodb-memory-server`
+- **Frontend SPA**: React (Vite), Tailwind CSS, Axios, React Router v7, Lucide Icons
+
+---
+
+## 🚀 Local Setup & Installation Instructions
+
+### Prerequisites
+- Node.js (v18+)
+- npm
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/tirthchaudhary/CAR-DELIVERY-INCUBYTE.git
+cd CAR-DELIVERY-INCUBYTE
+```
+
+### 2. Backend Setup
+```bash
+cd server
+npm install
+```
+
+Create `server/.env`:
+```env
+PORT=5000
+JWT_SECRET=supersecretkey123
+MONGO_URI=mongodb+srv://tirthc071_db_user:zje8SycfGXgHl15i@cluster0.dyjcep1.mongodb.net/car-dealership?retryWrites=true&w=majority
+```
+
+Run Backend Server:
+```bash
+npm run dev
+```
+*(Server listens on `http://localhost:5000`)*
+
+### 3. Frontend Setup
+In a new terminal window:
+```bash
+cd client
+npm install
+```
+
+Create `client/.env`:
+```env
+VITE_API_BASE_URL=http://localhost:5000/api
+```
+
+Run Frontend SPA:
+```bash
+npm run dev
+```
+*(Client runs on `http://localhost:5173`)*
+
+---
+
+## 🧪 Test Execution Report
+
+The backend was developed using strict **Test-Driven Development (TDD)**. Tests are executed against an in-memory database (`mongodb-memory-server`) to ensure zero pollution of the production MongoDB cluster.
+
+To run the automated integration test suite:
+```bash
+cd server
+npm test
+```
+
+### Passing Test Output (13 / 13 Passed):
+```text
+PASS __tests__/vehicle.test.js
+PASS __tests__/auth.test.js
+PASS __tests__/health.test.js
+
+Test Suites: 3 passed, 3 total
+Tests:       13 passed, 13 total
+Snapshots:   0 total
+Time:        9.339 s
+Ran all test suites.
+```
+
+---
+
+## 🤖 My AI Usage
+
+In compliance with the assignment guidelines, AI tools were leveraged as developer assistance tools throughout the software development lifecycle.
+
+### AI Tools Used
+- **Gemini / AI Coding Assistant**
+
+### How AI Was Used
+1. **Architecture & Boilerplate Guidance**: Brainstorming modular Express folder structures (`controllers`, `routes`, `middleware`, `models`) and setting up Jest test runner configs.
+2. **TDD Test Scaffolding**: Generating initial failing test assertion blocks (`expect(res.statusCode).toEqual(...)`) for authentication and vehicle CRUD endpoints before writing controller logic.
+3. **Syntax Reference**: Quick reference for Mongoose regex options, JWT verification middleware, and Tailwind CSS utility classes.
+4. **Debugging Edge Cases**: Resolving token header string splitting bugs and converting URL query strings into numbers for database price range queries.
+
+---
+
+## 📝 Deliverables Checklist
+
+- [x] Public Git Repository Link (`https://github.com/tirthchaudhary/CAR-DELIVERY-INCUBYTE.git`)
+- [x] Test-Driven Development (TDD) Red-Green-Refactor commit history
+- [x] Git Commit Messages with `Co-authored-by: AI Tool Name <email>` trailers
+- [x] Comprehensive `README.md` with setup instructions & test report
+- [x] Mandatory "My AI Usage" reflection section in `README.md`
+- [x] `PROMPTS.md` containing prompt history log in root folder
+- [x] Role-Based Access Control (Admin vs User permissions)
+- [x] Responsive React + Tailwind CSS SPA Frontend with disabled Purchase button on 0 stock
