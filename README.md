@@ -47,11 +47,11 @@ cd server
 npm install
 ```
 
-Create `server/.env`:
+Create a `server/.env` file (refer to `server/.env.example` template):
 ```env
 PORT=5000
-JWT_SECRET=supersecretkey123
-MONGO_URI=mongodb+srv://tirthc071_db_user:zje8SycfGXgHl15i@cluster0.dyjcep1.mongodb.net/car-dealership?retryWrites=true&w=majority
+JWT_SECRET=your_jwt_secret_key_here
+MONGO_URI=your_mongodb_connection_string_here
 ```
 
 Run Backend Server:
@@ -67,7 +67,7 @@ cd client
 npm install
 ```
 
-Create `client/.env`:
+Create a `client/.env` file (refer to `client/.env.example` template):
 ```env
 VITE_API_BASE_URL=http://localhost:5000/api
 ```
