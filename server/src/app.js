@@ -8,6 +8,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Root health check endpoint
+app.get('/', (req, res) => {
+    res.status(200).json({ status: 'OK', message: 'Car Dealership API is running live' });
+});
+
 // Auth Routes
 app.use('/api/auth', authRoutes);
 
