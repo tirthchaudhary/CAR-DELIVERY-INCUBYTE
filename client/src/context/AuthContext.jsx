@@ -45,7 +45,7 @@ export const AuthProvider = ({ children }) => {
     setUser(null);
   };
 
-  // 🔑 Calculate whether current logged-in user is an admin
+  // Calculate whether current logged-in user is an admin
   const isAdmin = user?.role === 'admin';
 
   return (
