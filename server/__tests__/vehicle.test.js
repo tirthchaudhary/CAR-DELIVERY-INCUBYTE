@@ -110,6 +110,8 @@ describe('Vehicle & Inventory API (TDD)', () => {
         });
     });
 
+    // TDD For the Purchase Vehicle and Stock
+
     describe('POST /api/vehicles/:id/purchase', () => {
         it('should decrease vehicle quantity by 1 upon purchase', async () => {
             const car = await Vehicle.create({
